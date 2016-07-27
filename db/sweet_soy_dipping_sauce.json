@@ -1,0 +1,45 @@
+"recipe": {
+  "id": 2,
+  "name": "Sweet Soy Dipping Sauce",
+  "description": "Classic Chinese sauce for scallion pancakes",
+  "image": "image source here",
+
+  "ingredients": [
+    { "ingredient": "soy sauce",
+    "quality": "",
+    "quantity": 2,
+    "measure": "tablespoons" },
+
+    { "ingredient": "rice wine vinegar",
+    "quality": "",
+    "quantity": 2,
+    "measure": "tablespoons" },
+
+    { "ingredient": "sugar",
+    "quality": "",
+    "quantity": 1,
+    "measure": "tablespoon" },
+
+    { "ingredient": "sesame oil",
+    "quality": "",
+    "quantity": 0.5,
+    "measure": "teaspoon" },
+
+    { "ingredient": "ginger",
+    "quality": "minced, fresh",
+    "quantity": 1,
+    "measure": "tablespoon" },
+
+    { "ingredient": "sesame seeds",
+    "quality": "toasted",
+    "quantity": 1,
+    "measure": "teaspoon" },
+  ],
+
+  "directions": [
+    { "order": 1,
+    "direction": "Mix all ingredients and let sugar disolve." },
+  ],
+
+  "related_recipe_ids": [1]
+}
