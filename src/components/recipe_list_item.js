@@ -1,12 +1,12 @@
 import React from 'react';
 
-const RecipeListItem = ({recipe}) => {
+const RecipeListItem = ({recipe, onRecipeSelect}) => {
 
 
   return(
-    <li className="list-group-item">
-      <h6>{recipe.name}</h6>
-      <p>{recipe.description}</p>
+    <li onClick={() => onRecipeSelect(recipe)} className="list-group-item">
+      <div className="recipe-name">{recipe.name}</div>
+      <div className="recipe-description">{recipe.description}</div>
     </li>
   );
 };

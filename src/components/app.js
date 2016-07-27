@@ -10,7 +10,8 @@ export default class App extends Component {
     super(props);
 
     this.state = {
-      recipes: []
+      recipes: [],
+      selectedRecipe: null
     }
 
     this.dataSetup();
@@ -26,7 +27,10 @@ export default class App extends Component {
 
   componentWillMount() {
     let db = localStorage.getItem('recipes');
-    this.setState({ recipes: JSON.parse(db) });
+    this.setState({
+      recipes: JSON.parse(db),
+      selectedRecipe: JSON.parse(db)[0],
+    });
   }
 
   render() {
@@ -34,7 +38,10 @@ export default class App extends Component {
       <div>
         <Header />
         <SearchBar />
-        <RecipeList recipes={this.state.recipes} />
+        <RecipeList
+          recipes={this.state.recipes}
+          onRecipeSelect={ selectedRecipe => this.setState({ selectedRecipe }) }
+           />
       </div>
     );
   }
