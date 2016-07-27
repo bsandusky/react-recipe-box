@@ -1,5 +1,5 @@
-let db = {
-   0: {
+let db = [
+   {
       "name":"Scallion Pancakes",
       "description":"Classic Mainland Chinese appetizer, serve crisp with a sweet soy dipping sauce",
       "image":"image source here",
@@ -83,10 +83,9 @@ let db = {
          1
       ]
    },
-
-   1: {
+   {
       "name":"Sweet Soy Dipping Sauce",
-      "description":"Classic Chinese sauce for scallion pancakes",
+      "description":"Classic soy-based sauce for scallion pancakes",
       "image":"image source here",
       "ingredients":[
          {
@@ -136,6 +135,6 @@ let db = {
          0
       ]
    }
-}
+]
 
 export default db;

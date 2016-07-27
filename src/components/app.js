@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import Header from './header';
+import SearchBar from './search_bar';
+import RecipeList from './recipe_list';
 import db from '../../db/recipes';
 
 export default class App extends Component {
@@ -7,7 +10,7 @@ export default class App extends Component {
     super(props);
 
     this.state = {
-      recipes: {}
+      recipes: []
     }
 
     this.dataSetup();
@@ -16,21 +19,23 @@ export default class App extends Component {
   dataSetup() {
     if (typeof (Storage) !== "undefined") {
       localStorage.setItem('recipes', JSON.stringify(db));
-    }
-
-    else {
-      // Sorry! No Web Storage support..
+    } else {
+      Alert("Sorry! I cannot store things in this browser.");
     }
   }
 
   componentWillMount() {
-    var db = localStorage.getItem('recipes');
+    let db = localStorage.getItem('recipes');
     this.setState({ recipes: JSON.parse(db) });
   }
 
   render() {
     return (
-      <div>Recipe Box!</div>
+      <div>
+        <Header />
+        <SearchBar />
+        <RecipeList recipes={this.state.recipes} />
+      </div>
     );
   }
 }
