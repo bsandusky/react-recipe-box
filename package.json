@@ -1,7 +1,7 @@
 {
   "name": "react-recipe-box",
   "version": "1.0.0",
-  "description": "Simple starter package for Redux with React and Babel support",
+  "description": "Simple recipe application using React",
   "main": "index.js",
   "repository": "https://github.com/bsandusky/react-recipe-box.git",
   "scripts": {
@@ -27,6 +27,7 @@
   },
   "dependencies": {
     "babel-preset-stage-1": "^6.1.18",
+    "json-loader": "^0.5.4",
     "lodash": "^3.10.1",
     "react": "^0.14.3",
     "react-dom": "^0.14.3",

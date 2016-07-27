@@ -1,4 +1,5 @@
-"recipe": {
+{
+  "recipe": {
   "id": 2,
   "name": "Sweet Soy Dipping Sauce",
   "description": "Classic Chinese sauce for scallion pancakes",
@@ -33,13 +34,14 @@
     { "ingredient": "sesame seeds",
     "quality": "toasted",
     "quantity": 1,
-    "measure": "teaspoon" },
+    "measure": "teaspoon" }
   ],
 
   "directions": [
     { "order": 1,
-    "direction": "Mix all ingredients and let sugar disolve." },
+    "direction": "Mix all ingredients and let sugar disolve." }
   ],
 
   "related_recipe_ids": [1]
+  }
 }

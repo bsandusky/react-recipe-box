@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import db from '../../db/recipes';
 
 export default class App extends Component {
 
@@ -6,8 +7,25 @@ export default class App extends Component {
     super(props);
 
     this.state = {
-      recipes: ''
+      recipes: {}
     }
+
+    this.dataSetup();
+  }
+
+  dataSetup() {
+    if (typeof (Storage) !== "undefined") {
+      localStorage.setItem('recipes', JSON.stringify(db));
+    }
+
+    else {
+      // Sorry! No Web Storage support..
+    }
+  }
+
+  componentWillMount() {
+    var db = localStorage.getItem('recipes');
+    this.setState({ recipes: JSON.parse(db) });
   }
 
   render() {
