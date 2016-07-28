@@ -3,6 +3,10 @@
   border-radius: 10px;
 }
 
+.search-bar {
+  padding-left: 0 !important;
+}
+
 .search-bar input {
-  width: 355px;
+  width: 100%;
 }
