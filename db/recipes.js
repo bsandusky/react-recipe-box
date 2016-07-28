@@ -2,7 +2,7 @@ let db = [
    {
       "name":"Scallion Pancakes",
       "description":"Classic Mainland Chinese appetizer, serve crisp with a sweet soy dipping sauce",
-      "image":"image source here",
+      "image":"https://upload.wikimedia.org/wikipedia/commons/3/3a/Spring_onion_pancake_2013.JPG",
       "ingredients":[
          {
             "ingredient":"flour",
@@ -78,15 +78,12 @@ let db = [
             "order":9,
             "direction":"Sprinkle each pancake with salt, serve with dipping sauce."
          }
-      ],
-      "related_recipe_ids":[
-         1
       ]
    },
    {
       "name":"Sweet Soy Dipping Sauce",
       "description":"Classic soy-based sauce for scallion pancakes",
-      "image":"image source here",
+      "image":"https://lh4.ggpht.com/ji4oUlTqdg6oJlIL_tQV9BETZEMJWNYa37nNtU-AYW1Wi_vQSzNZkmglWVZl6LwKYAyHZTN36Ixs2lMK7-G6Gw=s480-c-e365",
       "ingredients":[
          {
             "ingredient":"soy sauce",
@@ -131,9 +128,6 @@ let db = [
             "direction":"Mix all ingredients and let sugar disolve."
          }
       ],
-      "related_recipe_ids":[
-         0
-      ]
    }
 ]
 

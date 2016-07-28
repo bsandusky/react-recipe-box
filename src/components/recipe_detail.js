@@ -37,9 +37,24 @@ class RecipeDetail extends Component {
       return <div> Loading... </div>;
     }
 
+    if (this.props.recipe.image === "") {
+      return (
+        <div className="recipe-detail col-md-8">
+          <div>{this.props.recipe.name}</div>
+          <div>{this.props.recipe.description}</div>
+          <div className="ingredients">Ingredients
+            <ul className="list-group">{this.renderIngredients()}</ul>
+          </div>
+          <div className="directions">Directions
+            <ol className="list-group">{this.renderDirections()}</ol>
+          </div>
+        </div>
+      );
+    }
+
     return (
       <div className="recipe-detail col-md-8">
-        <div><img src={this.props.recipe.image} /></div>
+        <div><img src={this.props.recipe.image} className="image" /></div>
         <div>{this.props.recipe.name}</div>
         <div>{this.props.recipe.description}</div>
         <div className="ingredients">Ingredients
@@ -51,7 +66,6 @@ class RecipeDetail extends Component {
       </div>
     );
   }
-
 };
 
 export default RecipeDetail;

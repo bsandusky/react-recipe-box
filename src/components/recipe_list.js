@@ -1,5 +1,7 @@
 import React from 'react';
 import RecipeListItem from './recipe_list_item';
+import SearchBar from './search_bar';
+
 
 const RecipeList = ({recipes, onRecipeSelect}) => {
 
@@ -13,9 +15,12 @@ const RecipeList = ({recipes, onRecipeSelect}) => {
   });
 
   return (
-    <ul className="col-md-4 list-group">
-      {RecipeItems}
-    </ul>
+    <div>
+      <SearchBar />
+      <ul className="col-md-4 list-group">
+        {RecipeItems}
+      </ul>
+  </div>
   );
 };
 

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Header from './header';
-import SearchBar from './search_bar';
 import RecipeList from './recipe_list';
 import RecipeDetail from './recipe_detail';
 import db from '../../db/recipes';
@@ -38,7 +37,6 @@ export default class App extends Component {
     return (
       <div>
         <Header />
-        <SearchBar />
         <RecipeDetail recipe={this.state.selectedRecipe} />
         <RecipeList
           recipes={this.state.recipes}
