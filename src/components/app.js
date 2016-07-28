@@ -26,10 +26,10 @@ export default class App extends Component {
   }
 
   componentWillMount() {
-    let db = localStorage.getItem('recipes');
+    let recipes = JSON.parse(localStorage.getItem('recipes'));
     this.setState({
-      recipes: JSON.parse(db),
-      selectedRecipe: JSON.parse(db)[0],
+      recipes: recipes,
+      selectedRecipe: recipes[0],
     });
   }
 

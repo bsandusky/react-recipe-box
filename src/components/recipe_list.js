@@ -1,12 +1,12 @@
 import React from 'react';
 import RecipeListItem from './recipe_list_item';
 
-const RecipeList = (props) => {
+const RecipeList = ({recipes, onRecipeSelect}) => {
 
-  const RecipeItems = props.recipes.map((recipe) => {
+  const RecipeItems = recipes.map((recipe) => {
     return (
       <RecipeListItem
-        onRecipeSelect={props.onRecipeSelect}
+        onRecipeSelect={onRecipeSelect}
         key={recipe.name}
         recipe={recipe} />
     );
