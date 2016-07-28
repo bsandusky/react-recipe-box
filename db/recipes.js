@@ -31,13 +31,13 @@ let db = [
          {
             "ingredient":"vegetable oil",
             "quality":"",
-            "quantity":"As needed",
+            "quantity":"as needed",
             "measure":""
          },
          {
             "ingredient":"salt",
             "quality":"",
-            "quantity":"To taste",
+            "quantity":"to taste",
             "measure":""
          }
       ],
