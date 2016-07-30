@@ -11,4 +11,8 @@ const SearchBar = (props) => {
   );
 }
 
+SearchBar.propTypes = {
+  filterList: React.PropTypes.func
+}
+
 export default SearchBar;

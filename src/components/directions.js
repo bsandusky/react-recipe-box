@@ -20,4 +20,8 @@ const Directions = (props) => {
     );
 }
 
+Directions.propTypes = {
+  directions: React.PropTypes.array
+};
+
 export default Directions;

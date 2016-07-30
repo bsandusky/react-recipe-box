@@ -46,3 +46,8 @@ export default class App extends Component {
     );
   }
 }
+
+App.propTypes = {
+  recipes: React.PropTypes.array,
+  selectedRecipe: React.PropTypes.object
+};

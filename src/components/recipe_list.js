@@ -6,12 +6,11 @@ class RecipeList extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {  initialRecipes: this.props.recipes,
-                    recipes: [] };
+    this.state = { recipes: [] };
   }
 
   componentWillMount() {
-    this.setState({ recipes: this.state.initialRecipes });
+    this.setState({ recipes: this.props.recipes });
   }
 
   renderList() {
@@ -26,11 +25,11 @@ class RecipeList extends Component {
   }
 
   filterList(event) {
-    let updatedList = Array.prototype.filter.call(this.state.initialRecipes, (item) => {
+    let filteredList = Array.prototype.filter.call(this.props.recipes, (item) => {
       return item.name.toLowerCase().search(
         event.target.value.toLowerCase()) !== -1;
     });
-    this.setState({ recipes: updatedList });
+    this.setState({ recipes: filteredList });
   }
 
   render() {
@@ -44,5 +43,9 @@ class RecipeList extends Component {
     );
   }
 };
+
+RecipeList.propTypes = {
+  recipes: React.PropTypes.array
+}
 
 export default RecipeList;

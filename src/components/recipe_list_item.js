@@ -10,4 +10,9 @@ const RecipeListItem = ({recipe, onRecipeSelect}) => {
   );
 };
 
+RecipeListItem.propTypes = {
+  recipe: React.PropTypes.object,
+  onRecipeSelect: React.PropTypes.func
+};
+
 export default RecipeListItem;

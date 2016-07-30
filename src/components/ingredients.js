@@ -20,4 +20,8 @@ const Ingredients = (props) => {
   );
 }
 
+Ingredients.propTypes = {
+  ingredients: React.PropTypes.array
+};
+
 export default Ingredients;

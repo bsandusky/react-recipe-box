@@ -30,4 +30,8 @@ class RecipeDetail extends Component {
   }
 };
 
+RecipeDetail.propTypes = {
+  recipe: React.PropTypes.object
+};
+
 export default RecipeDetail;
