@@ -2,7 +2,6 @@ import React from 'react';
 import RecipeListItem from './recipe_list_item';
 import SearchBar from './search_bar';
 
-
 const RecipeList = ({recipes, onRecipeSelect}) => {
 
   const RecipeItems = recipes.map((recipe) => {
