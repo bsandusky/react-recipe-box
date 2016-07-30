@@ -1,18 +1,8 @@
 import React, { Component } from 'react';
 import Ingredients from './ingredients';
+import Directions from './directions'
 
 class RecipeDetail extends Component {
-
-  renderDirections() {
-    return this.props.recipe.directions.map((direction) => {
-
-      return (
-        <li key={direction.order} className="list-group-item">
-          {direction.order}: {direction.direction}
-        </li>
-      )
-    });
-  }
 
   render() {
     if (!this.props.recipe) {
@@ -23,11 +13,8 @@ class RecipeDetail extends Component {
       return (
         <div className="recipe-detail col-md-8">
           <div>{this.props.recipe.name}</div>
-          <div>{this.props.recipe.description}</div>
           <Ingredients ingredients={this.props.recipe.ingredients} />
-          <div className="directions">Directions
-            <ol className="list-group">{this.renderDirections()}</ol>
-          </div>
+          <Directions directions={this.props.recipe.directions} />
         </div>
       );
     }
@@ -35,12 +22,9 @@ class RecipeDetail extends Component {
     return (
       <div className="recipe-detail col-md-8">
         <div><img src={this.props.recipe.image} className="image" /></div>
-          <div>{this.props.recipe.name}</div>
-          <div>{this.props.recipe.description}</div>
-          <Ingredients ingredients={this.props.recipe.ingredients} />
-          <div className="directions">Directions
-            <ol className="list-group">{this.renderDirections()}</ol>
-          </div>
+        <div>{this.props.recipe.name}</div>
+        <Ingredients ingredients={this.props.recipe.ingredients} />
+        <Directions directions={this.props.recipe.directions} />
       </div>
     );
   }

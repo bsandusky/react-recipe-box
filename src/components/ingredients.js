@@ -3,20 +3,12 @@ import React from 'react';
 const Ingredients = (props) => {
 
   const IngredientItems = props.ingredients.map((ingredient) => {
-    if (ingredient.measure === "") {
 
       return (
-        <li key={ingredient.ingredient} className="list-group-item">
-         {ingredient.quality} {ingredient.ingredient} {ingredient.quantity}
+        <li key={ingredient} className="list-group-item">
+          {ingredient}
         </li>
       );
-    };
-
-    return (
-      <li key={ingredient.ingredient} className="list-group-item">
-        {ingredient.quantity} {ingredient.measure} {ingredient.quality} {ingredient.ingredient}
-      </li>
-    );
   });
 
   return (
