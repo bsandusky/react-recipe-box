@@ -25,8 +25,9 @@ class RecipeList extends Component {
   }
 
   filterList(event) {
-    let filteredList = Array.prototype.filter.call(this.props.recipes, (item) => {
-      return item.name.toLowerCase().search(
+    const filteredList = Array.prototype.filter.call(this.props.recipes, (item) => {
+      const searchField = item.name.concat(' ', item.description);
+      return searchField.toLowerCase().search(
         event.target.value.toLowerCase()) !== -1;
     });
     this.setState({ recipes: filteredList });

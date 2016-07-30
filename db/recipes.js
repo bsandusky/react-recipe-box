@@ -1,4 +1,4 @@
-let db = [
+const db = [
    {
       "name":"Scallion Pancakes",
       "description":"Classic Mainland Chinese appetizer, serve crisp with a sweet soy dipping sauce",
