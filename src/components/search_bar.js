@@ -5,7 +5,7 @@ const SearchBar = (props) => {
   return (
     <div className="search-bar col-md-4">
       <section id="search">
-        <input id="search-input" placeholder="Seach recipes" onChange={(event) => props.filterList(event)}/>
+        <input id="search-input" placeholder="Search recipes" onChange={(event) => props.filterList(event)}/>
       </section>
     </div>
   );
