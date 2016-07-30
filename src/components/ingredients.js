@@ -4,11 +4,11 @@ const Ingredients = (props) => {
 
   const IngredientItems = props.ingredients.map((ingredient) => {
 
-      return (
-        <li key={ingredient} className="list-group-item">
-          {ingredient}
-        </li>
-      );
+    return (
+      <li key={ingredient} className="list-group-item">
+        {ingredient}
+      </li>
+    );
   });
 
   return (

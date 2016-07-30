@@ -12,7 +12,7 @@ export default class App extends Component {
     this.state = {
       recipes: [],
       selectedRecipe: null
-    }
+    };
 
     this.dataSetup();
   }
