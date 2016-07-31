@@ -18,10 +18,13 @@ export default class App extends Component {
   }
 
   dataSetup() {
-    if (typeof (Storage) !== "undefined") {
+
+    if (typeof localStorage === "undefined" || localStorage === null) {
+      let LocalStorage = require('node-localstorage').LocalStorage;
+      let localStorage = new LocalStorage('./localStorageTemp');
       localStorage.setItem('recipes', JSON.stringify(db));
     } else {
-      Alert("Sorry! I cannot store things in this browser.");
+      localStorage.setItem('recipes', JSON.stringify(db));
     }
   }
 

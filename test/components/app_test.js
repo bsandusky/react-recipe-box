@@ -1,14 +1,20 @@
-import { renderComponent , expect } from '../test_helper';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import TestUtils from 'react-addons-test-utils';
+import { expect } from 'chai';
 import App from '../../src/components/app';
 
-describe('App' , () => {
-  let component;
+describe('App', () => {
+  let result;
 
   beforeEach(() => {
-    component = renderComponent(App);
+    const renderer = TestUtils.createRenderer();
+    renderer.render(<App />);
+    result = renderer.getRenderOutput();
   });
 
   it('renders something', () => {
-    expect(component).to.exist;
+    expect(result).to.exist;
   });
+
 });
