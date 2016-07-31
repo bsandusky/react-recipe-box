@@ -2,14 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import TestUtils from 'react-addons-test-utils';
 import { expect } from 'chai';
-import App from '../../src/components/app';
+import RecipeDetail from '../../src/components/recipe_detail';
+import recipe from '../test_helper.js';
 
-describe('App', () => {
+describe('RecipeDetail', () => {
   let result;
 
   beforeEach(() => {
     const renderer = TestUtils.createRenderer();
-    renderer.render(<App />);
+    renderer.render(<RecipeDetail recipe={recipe} />);
     result = renderer.getRenderOutput();
   });
 
@@ -17,8 +18,8 @@ describe('App', () => {
     expect(result).to.exist;
   });
 
-  it('should render three children', () => {
-    expect(result.props.children.length).to.equal(3);
-  })
+  it('should render four children', () => {
+    expect(result.props.children.length).to.equal(4);
+  });
 
 });

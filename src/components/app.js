@@ -20,9 +20,7 @@ export default class App extends Component {
   dataSetup() {
 
     if (typeof localStorage === "undefined" || localStorage === null) {
-      let LocalStorage = require('node-localstorage').LocalStorage;
-      let localStorage = new LocalStorage('./localStorageTemp');
-      localStorage.setItem('recipes', JSON.stringify(db));
+      alert("This browser does not support localStorage.");
     } else {
       localStorage.setItem('recipes', JSON.stringify(db));
     }

@@ -15,3 +15,13 @@ Object.keys(window).forEach((key) => {
     global[key] = window[key];
   }
 });
+
+let recipe = {
+  "name": "recipe name",
+  "description": "recipe description",
+  "image": "recipe image",
+  "ingredients": [1,2,3,4,5],
+  "directions": [1,2,3,4,5]
+};
+
+export default recipe;

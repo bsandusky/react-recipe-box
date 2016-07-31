@@ -6,7 +6,7 @@ class RecipeDetail extends Component {
 
   render() {
     if (!this.props.recipe) {
-      return <div> Loading... </div>;
+      return <div>Loading... </div>;
     }
 
     if (this.props.recipe.image === "") {
