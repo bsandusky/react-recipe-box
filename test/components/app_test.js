@@ -13,6 +13,10 @@ describe('App', () => {
     result = renderer.getRenderOutput();
   });
 
+  afterEach(() => {
+    localStorage.clear();
+  });
+
   it('renders', () => {
     expect(result).to.exist;
   });
