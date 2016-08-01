@@ -25,6 +25,10 @@ export default class App extends Component {
     }
   }
 
+  updateRecipe(event) {
+    console.log(event.target);
+  }
+
   componentWillMount() {
     let recipes = JSON.parse(localStorage.getItem('recipes'));
     this.setState({

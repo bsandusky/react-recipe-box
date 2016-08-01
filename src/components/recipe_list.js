@@ -46,7 +46,8 @@ class RecipeList extends Component {
 };
 
 RecipeList.propTypes = {
-  recipes: React.PropTypes.array
+  recipes: React.PropTypes.array,
+  onRecipeSelect: React.PropTypes.func
 }
 
 export default RecipeList;
