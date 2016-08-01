@@ -17,11 +17,11 @@ export default class App extends Component {
     this.dataSetup();
   }
 
-  dataSetup() {
-    if (typeof (Storage) !== "undefined") {
-      localStorage.setItem('recipes', JSON.stringify(db));
+  dataSetup() {    
+    if (typeof localStorage === "undefined" || localStorage === null) {
+      alert("This browser does not support localStorage.");
     } else {
-      Alert("Sorry! I cannot store things in this browser.");
+      localStorage.setItem('recipes', JSON.stringify(db));
     }
   }
 

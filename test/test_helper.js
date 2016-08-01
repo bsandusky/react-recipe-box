@@ -1,36 +1,27 @@
-import _$ from 'jquery';
-import React from 'react';
-import ReactDOM from 'react-dom';
-import TestUtils from 'react-addons-test-utils';
 import jsdom from 'jsdom';
-import chai, { expect } from 'chai';
-import chaiJquery from 'chai-jquery';
-import { Provider } from 'react-redux';
-import { createStore } from 'redux';
-import reducers from '../src/reducers';
 
 global.document = jsdom.jsdom('<!doctype html><html><body></body></html>');
 global.window = global.document.defaultView;
 global.navigator = global.window.navigator;
-const $ = _$(window);
 
-chaiJquery(chai, chai.util, $);
+//mock local storage
+const LocalStorage = require('node-localstorage').LocalStorage;
+global.localStorage = new LocalStorage('./localStorageTemp');
+global.window.localStorage = global.localStorage;
 
-function renderComponent(ComponentClass, props = {}, state = {}) {
-  const componentInstance =  TestUtils.renderIntoDocument(
-    <Provider store={createStore(reducers, state)}>
-      <ComponentClass {...props} />
-    </Provider>
-  );
-
-  return $(ReactDOM.findDOMNode(componentInstance));
-}
-
-$.fn.simulate = function(eventName, value) {
-  if (value) {
-    this.val(value);
+// add window properties to global object
+Object.keys(window).forEach((key) => {
+  if (!(key in global)) {
+    global[key] = window[key];
   }
-  TestUtils.Simulate[eventName](this[0]);
+});
+
+let recipe = {
+  "name": "recipe name",
+  "description": "recipe description",
+  "image": "recipe image",
+  "ingredients": [1,2,3,4,5],
+  "directions": [1,2,3,4,5]
 };
 
-export {renderComponent, expect};
+export { recipe };

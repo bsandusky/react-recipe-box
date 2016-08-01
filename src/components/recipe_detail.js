@@ -1,6 +1,8 @@
 import React from 'react';
 import Ingredients from './ingredients';
-import Directions from './directions'
+import Directions from './directions';
+import EditRecipe from './edit_recipe';
+
 
 const RecipeDetail = ({recipe}) => {
 
@@ -11,9 +13,10 @@ const RecipeDetail = ({recipe}) => {
   if (recipe.image === "") {
     return (
       <div className="recipe-detail col-md-8">
-        <div>{recipe.name} <button className="btn btn-outline-primary">Edit</button></div>
+        <div>{recipe.name}</div>
         <Ingredients ingredients={recipe.ingredients} />
         <Directions directions={recipe.directions} />
+        <EditRecipe recipe={recipe} />
       </div>
     );
   }
@@ -21,9 +24,10 @@ const RecipeDetail = ({recipe}) => {
   return (
     <div className="recipe-detail col-md-8">
       <div><img src={recipe.image} className="image" /></div>
-      <div>{recipe.name} <button className="btn btn-outline-primary">Edit</button></div>
+      <div>{recipe.name}</div>
       <Ingredients ingredients={recipe.ingredients} />
       <Directions directions={recipe.directions} />
+      // <EditRecipe recipe={recipe} />
     </div>
   );
 };
